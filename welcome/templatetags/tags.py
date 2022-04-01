@@ -7,7 +7,17 @@ except ImportError:
 
 register = template.Library()
 
-# Menu de Administrador
+# Menu
 @register.inclusion_tag('tags/menu.html')
 def menu(user):
+    return {'user':user}
+
+#About
+@register.inclusion_tag('tags/about.html')
+def about(user):
+    return {'user':user}
+
+#Tecnologies
+@register.inclusion_tag('tags/technologies.html')
+def technologies(user):
     return {'user':user}

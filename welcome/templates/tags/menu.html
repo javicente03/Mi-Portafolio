@@ -1,14 +1,25 @@
+{% load static %}
 <div class="navbar-fixed">
     <nav>
         <div class="nav-wrapper navcolor fixed">
             <div class="contenedor-nav">
                 <a href="login" class="brand-logo"><img src="frontend/img/resources/logo.jpg" class="img-logo" alt=""></a>
-                <ul class="right hide-on-med-and-down">
-                    <li><a href="generar_usuario">
-                        <i class="material-icons left">supervisor_account</i></a></li>
+                <ul class="right hide-on-small-only">
+                    <li><a href="">
+                        <i class="material-icons left">person</i>
+                        <span class="hide-on-med-and-down">Sobre mí</span></a></li>
+                    <li><a href="">
+                        <i class="material-icons left">code</i>
+                        <span class="hide-on-med-and-down">Tecnologías</span></a></li>
+                    <li><a href="">
+                        <i class="material-icons left">school</i>
+                        <span class="hide-on-med-and-down">Educación</span></a></li>
+                    <li><a href="">
+                        <i class="material-icons left">contact_mail</i>
+                        <span class="hide-on-med-and-down">Contáctame</span></a></li>
                     
                 </ul>
-                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger hide-on-med-and-up"><i class="material-icons">menu</i></a>
             </div>
         </div>
     </nav>

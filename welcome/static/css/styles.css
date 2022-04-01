@@ -1,3 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: linear-gradient(90deg, rgb(217, 217, 250) 25%, rgb(255, 255, 255) 100%);
+}
+
+.about-section{
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+}
+
+.about-me > span, .about-me > h1, .about-me > p{
+    color: #d8ca02;
+    font-weight: bold;
+    text-shadow: black 1px 1px 1px;
+}
+
+.about-me > h1{
+    margin: 0;
+}
+
+.about-me > p {
+    color: #a09500;
+}
+
+.change{
+    font-size: 30px;
+}
+
 .navcolor{
     background: linear-gradient(90deg, rgba(9,9,121,1) 25%, rgba(2,0,36,1) 100%);
+}
+
+.profile-img{
+    box-shadow: black 2px 2px 2px;
+}
+
+.s8 > a{
+    border-radius: .5em;
+    font-weight: bold;
+}
+
+.s2 > a > img:hover{
+    opacity: 0.5;
+}
+
+.technologies{
+    background: rgb(228, 228, 228);
 }
