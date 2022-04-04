@@ -21,3 +21,13 @@ def about(user):
 @register.inclusion_tag('tags/technologies.html')
 def technologies(user):
     return {'user':user}
+
+#Education
+@register.inclusion_tag('tags/education.html')
+def education(user):
+    return {'user':user}
+
+#footer
+@register.inclusion_tag('tags/footer.html')
+def footer(user):
+    return {'user':user}

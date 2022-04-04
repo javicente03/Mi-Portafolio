@@ -1,7 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&display=swap');
+
 body{
-    background-color: red;
+    background: linear-gradient(90deg, rgb(217, 217, 250) 25%, rgb(255, 255, 255) 100%);
+}
+
+.about-section{
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+}
+
+.about-me > span, .about-me > h1, .about-me > p{
+    font-family: 'Fraunces', serif;
+    color: #FFC745;
+    font-weight: bold;
+    text-shadow: black 1px 1px 1px;
+}
+
+.about-me > h1{
+    margin: 0;
+}
+
+.about-me > p {
+    color: #a09500;
+}
+
+.change{
+    font-size: 30px;
 }
 
 .navcolor{
-    background: linear-gradient(90deg, rgba(9,9,121,1) 25%, rgba(2,0,36,1) 100%);
+    background: linear-gradient(90deg, #2F2BFF 10%, #07058F 25%);
+}
+
+.profile-img{
+    box-shadow: black 2px 2px 2px;
+}
+
+.s8 > a{
+    border-radius: .5em;
+    font-weight: bold;
+}
+
+.s2 > a > img:hover{
+    opacity: 0.5;
+}
+
+.technologies{
+    background: rgb(228, 228, 228);
 }

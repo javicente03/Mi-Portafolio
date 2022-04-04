@@ -5,6 +5,7 @@
 
 body{
     background: linear-gradient(90deg, rgb(217, 217, 250) 25%, rgb(255, 255, 255) 100%);
+    font-family: 'Commissioner', sans-serif;
 }
 
 .about-section{
@@ -14,7 +15,7 @@ body{
 }
 
 .about-me > span, .about-me > h1, .about-me > p{
-    color: #d8ca02;
+    color: #FFC745;
     font-weight: bold;
     text-shadow: black 1px 1px 1px;
 }
@@ -23,16 +24,20 @@ body{
     margin: 0;
 }
 
-.about-me > p {
-    color: #a09500;
-}
-
 .change{
     font-size: 30px;
 }
 
+.collection { 
+    border-radius: 1em;
+}
+
+.font-title{
+    font-family: 'Fraunces', serif;
+}
+
 .navcolor{
-    background: linear-gradient(90deg, rgba(9,9,121,1) 25%, rgba(2,0,36,1) 100%);
+    background: linear-gradient(90deg, #2F2BFF 10%, #07058F 25%);
 }
 
 .profile-img{
@@ -40,8 +45,14 @@ body{
 }
 
 .s8 > a{
+    background: #1310DB;
     border-radius: .5em;
     font-weight: bold;
+    transition: ease-in-out .2s;
+}
+
+.s8 > a:hover{
+    background: #201cfc;
 }
 
 .s2 > a > img:hover{
@@ -49,5 +60,32 @@ body{
 }
 
 .technologies{
-    background: rgb(228, 228, 228);
+    background: linear-gradient(135deg, #FFFFFF 50%, #07058F 50%);
+    padding: 5px;
+}
+
+.technologies >  div > h3{
+    color: #f5b82a;
+    text-shadow: black 2px 2px 2px;
+}
+
+.wb-img {
+    filter: url("data:image/svg xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10 */
+    filter: gray; /*IE6-9*/
+    -webkit-filter: grayscale(100%); /*Chrome 19+ & Safari 6+*/
+    -webkit-transition: all .5s ease; /*Fade to color for Chrome and Safari*/
+    -moz-transition: all .5s ease;
+    -webkit-backface-visibility: hidden; /*Fix for transition flickering*/
+    width: 100%;
+    height: 100%;
+}
+
+.wb-img:hover {
+    filter: none;
+    -webkit-filter: grayscale(0%);
+}
+
+#education{
+    background: linear-gradient(135deg, #8f7600 50%, #ffffff 50%);
+    padding: 5px;
 }
