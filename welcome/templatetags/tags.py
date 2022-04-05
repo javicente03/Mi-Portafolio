@@ -27,6 +27,11 @@ def technologies(user):
 def education(user):
     return {'user':user}
 
+#Contact
+@register.inclusion_tag('tags/contact.html')
+def contact(user):
+    return {'user':user}
+
 #footer
 @register.inclusion_tag('tags/footer.html')
 def footer(user):
