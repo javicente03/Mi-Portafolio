@@ -8,3 +8,12 @@ $(document).ready(function(){
 $(document).ready(function(){
     $('.parallax').parallax();
 });
+
+//Inicialización del Scrollspy
+$(document).ready(function(){
+    $('.scrollspy').scrollSpy();
+});
+
+$(document).ready(function(){
+    $('.collapsible').collapsible();
+});

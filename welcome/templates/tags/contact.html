@@ -1,3 +1,4 @@
+{% load static %}
 <div id="contact">
     <div class="container">
         <div class="row about-section">
@@ -7,7 +8,18 @@
                      en la caja de texto o también puedes escribirme a mi WhatsApp, 
                      te aseguro que me pondré en contacto contigo
                     lo más pronto posible</p>
-                    <a href="https://api.whatsapp.com/send?phone=584246089787&text=Hola">Whatsapp</a>
+                    <div class="row">
+                        <div class="col m5 hide-on-small-only"></div>
+                        <div class="col s9 m5">
+                            <span id="phone" class="phone phone-out">+58 424-6089787</span> 
+                        </div>
+                        <div class="col s3 m2">
+                            <a href="https://api.whatsapp.com/send?phone=584246089787&text=Hola" id="linkWs">
+                                <img width="50px" src="{% static 'img/whatsapp.png' %}" alt="whatsapp" class="img-whatsapp">
+                            </a>
+                        </div>
+                    </div>
+                    
             </div>
 
             <div class="col s12 m6" >
