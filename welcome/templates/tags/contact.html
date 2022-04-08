@@ -23,17 +23,36 @@
             </div>
 
             <div class="col s12 m6" >
-                <div class="row contact-box" >
-                    <div class="col s12">
-                        <input type="text" placeholder="Dime tu nombre">
+                <form id="formContact">
+                    <div class="row contact-box" >
+                        <div class="col s12">
+                            <input type="text" name="name" id="name" placeholder="Dime tu nombre">
+                        </div>
+                        <div class="col s12">
+                            <input type="email" name="email" id="email" placeholder="Indícame tu correo electrónico">
+                        </div>
+                        <div class="col s12">
+                            <textarea type="text" name="message" id="message" placeholder="Detalla tu solicitud por favor"></textarea>
+                        </div>
+                        <div class="col s12 center">
+                            <button class="btn indigo darken-4 waves-effect waves-light" type="submit" id="submit">Enviar
+                                <i class="material-icons left">send</i>
+                            </button>
+                            <div class="preloader-wrapper small active" style="display:none" id="preloader">
+                                <div class="spinner-layer spinner-blue-only">
+                                    <div class="circle-clipper left">
+                                        <div class="circle"></div>
+                                    </div><div class="gap-patch">
+                                        <div class="circle"></div>
+                                    </div><div class="circle-clipper right">
+                                        <div class="circle"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        <div>
                     </div>
-                    <div class="col s12">
-                        <input type="email" placeholder="Indícame tu correo electrónico">
-                    </div>
-                    <div class="col s12">
-                        <textarea type="text" placeholder="Detalla tu solicitud por favor"></textarea>
-                    </div>
-                </div>
+                    {% csrf_token %}
+                </form>
             </div>
         </div>
     </div>
