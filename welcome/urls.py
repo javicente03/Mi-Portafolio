@@ -1,6 +1,6 @@
 from django.urls import path
 
-from .views import Contact, Welcome, send_email
+from .views import Contact, Welcome
 
 urlpatterns = [
     path('', Welcome.as_view(), name='welcome'),

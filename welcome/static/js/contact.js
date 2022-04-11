@@ -10,17 +10,14 @@ $("#formContact").submit(function(e) {
         url: "/welcome/contact/",
         data: $(this).serialize(),
         success: function (data) {
-            if (data.code == 200) {
-                alert("Mensaje enviado correctamente");
-            } else {
-                alert("Datos inválidos, por favor revísalos");
-            }
-            console.log(data.status)
+            // M.toast({html: 'Mensaje enviado correctamente', classes: 'rounded green'});
+            $('#modal1').modal('modal-trigger')
             submit.css('display', 'inline');
             preloader.css('display', 'none');
+            document.getElementById("formContact").reset()
         },
         error: function (data) {
-            alert("Error al enviar la información");
+            M.toast({html: data.responseText, classes: 'rounded red'});
             submit.css('display', 'inline');
             preloader.css('display', 'none');
         }

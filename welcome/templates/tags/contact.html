@@ -1,13 +1,15 @@
 {% load static %}
-<div id="contact">
+<div id="contact" class="scrollspy">
     <div class="container">
         <div class="row about-section">
             <div class="col s12 m6" >
-                <h3 class="font-title text-right">¿Quieres comunicarte conmigo?</h3>
-                <p class="text-right">Escribeme todas tus dudas y sugerencias
+                <h3 class="font-title text-right span-animate" id="contact-me">¿Quieres comunicarte conmigo?</h3>
+
+                <p class="text-right span-animate" >Escribeme todas tus dudas y sugerencias
                      en la caja de texto o también puedes escribirme a mi WhatsApp, 
                      te aseguro que me pondré en contacto contigo
                     lo más pronto posible</p>
+
                     <div class="row">
                         <div class="col m5 hide-on-small-only"></div>
                         <div class="col s9 m5">
@@ -26,16 +28,16 @@
                 <form id="formContact">
                     <div class="row contact-box" >
                         <div class="col s12">
-                            <input type="text" name="name" id="name" placeholder="Dime tu nombre">
+                            <input type="text" class="inputs" name="name" id="name" placeholder="Dime tu nombre">
                         </div>
                         <div class="col s12">
-                            <input type="email" name="email" id="email" placeholder="Indícame tu correo electrónico">
+                            <input type="email" class="inputs" name="email" id="email" placeholder="Indícame tu correo electrónico">
                         </div>
                         <div class="col s12">
-                            <textarea type="text" name="message" id="message" placeholder="Detalla tu solicitud por favor"></textarea>
+                            <textarea type="text" class="inputs" name="message" id="message" placeholder="Detalla tu solicitud por favor"></textarea>
                         </div>
                         <div class="col s12 center">
-                            <button class="btn indigo darken-4 waves-effect waves-light" type="submit" id="submit">Enviar
+                            <button class="btn indigo darken-4 waves-effect waves-light inputs" type="submit" id="submit">Enviar
                                 <i class="material-icons left">send</i>
                             </button>
                             <div class="preloader-wrapper small active" style="display:none" id="preloader">
@@ -55,5 +57,17 @@
                 </form>
             </div>
         </div>
+    </div>
+</div>
+
+
+<!-- Modal Structure -->
+<div id="modal1" class="modal modal-fixed-footer">
+    <div class="modal-content">
+        <h4>¡Enhorabuena!</h4>
+        <p>Ya tu mensaje ha sido enviado, dentro de poco haré contacto contigo.</p>
+    </div>
+    <div class="modal-footer">
+        <a rel="modal:close" class="modal-close waves-effect waves-green btn-flat">Aceptar</a>
     </div>
 </div>

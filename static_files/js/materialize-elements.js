@@ -14,6 +14,12 @@ $(document).ready(function(){
     $('.scrollspy').scrollSpy();
 });
 
+// Inicialización del Modal
+$(document).ready(function(){
+    $('.modal').modal();
+})
+
+// Inicialización del collapsible
 $(document).ready(function(){
     $('.collapsible').collapsible();
 });

@@ -5,8 +5,18 @@ from django.views.generic.base import TemplateView, View
 from django.core.mail import EmailMessage
 from django.core.validators import validate_email
 import re
+from portafolio.settings import EMAIL_HOST_USER
+
 
 # Create your views here.
+
+class Email():
+    def send_email(request, subject, body, to):
+        email = EmailMessage(subject,body, to=[to])
+        send = email.send()
+        if send:
+            return 1
+        return 0
 
 class Welcome(TemplateView):
     template_name = 'welcome.html'
@@ -25,13 +35,13 @@ class Contact(View):
                 valid_email = False
 
             if not valid_email:
-                print("NOT EMAIL")
-                return HttpResponse(status=400)
-            return HttpResponse(status=200)
-        else:
-            return HttpResponse(status=400)
+                return HttpResponse("Error: correo inválido", status=400)
 
-def send_email(request):
-    email = EmailMessage('Vamos','xd', to=['javicentego@gmail.com'])
-    email.send()
-    return HttpResponse("ok")
+            subject = "Mensaje enviado de "+name+" | "+email
+            email = Email()
+            if email.send_email(subject, message, EMAIL_HOST_USER):
+                return HttpResponse(status=200)
+            else:
+                return HttpResponse("Error: Lo siento, tu mensaje no ha podido enviarse", status=400)                
+        else:
+            return HttpResponse("Error: por favor revisa tus datos", status=400)

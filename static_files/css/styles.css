@@ -14,7 +14,7 @@ body{
     flex-wrap: wrap;
 }
 
-.about-me > span, .about-me > h1, .about-me > p{
+.about-me > span, .about-me > h1, .about-me > .presentation-container > span{
     color: #FFC745;
     font-weight: bold;
     text-shadow: black 1px 1px 1px;
@@ -34,6 +34,7 @@ body{
 
 .contact-box {
     padding: 25px 0;
+    overflow: hidden;
 }
 
 .contact-box > .col > input, .contact-box > .col > textarea{
@@ -64,12 +65,41 @@ body{
     padding: 10px;
 }
 
+.span-animate span{
+    display: inline-block;
+}
+
 .font-title{
     font-family: 'Fraunces', serif;
 }
 
+.inputs {
+    opacity: 0;
+}
+
+.modal-content{
+    background: linear-gradient(135deg, #FFFFFF 65%, #07058F 35%);
+    background-image: url('{% static "img/check.png" %}');
+}
+
 .navcolor{
     background: linear-gradient(90deg, #2F2BFF 10%, #07058F 25%);
+}
+
+.phone {
+    background-color: #FFFFFF;
+    border: 1px solid black;
+    border-radius: 1em; 
+    height: 50px;
+    display: inline-block;
+    padding-top: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    box-shadow: #2F2BFF 3px 3px 20px;
+}
+
+.phone-out {
+    display: none;
 }
 
 .profile-img{
@@ -129,3 +159,71 @@ body{
     background: linear-gradient(135deg, #8f7600 50%, #ffffff 50%);
     padding: 5px;
 }
+
+#contact > .container > .row > .col {
+    text-align: right;
+}
+
+/*Media Querys*/
+@media(max-width: 600px){
+    .phone-out{
+        display: inline-block;
+    }
+}
+
+@media(max-width: 330px){
+    .modal-content > h4{
+        font-size: 20px;
+    }
+}
+
+
+/*Texto dinamico*/
+.hidden {
+    opacity: 0;
+}
+
+.presentation-container{
+    text-align: left;
+    display: block;
+}
+
+.presentation {
+    display: inline-block;
+    position: relative;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
