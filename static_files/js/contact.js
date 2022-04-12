@@ -10,7 +10,8 @@ $("#formContact").submit(function(e) {
         url: "/welcome/contact/",
         data: $(this).serialize(),
         success: function (data) {
-            M.toast({html: 'Mensaje enviado correctamente', classes: 'rounded green'});
+            // M.toast({html: 'Mensaje enviado correctamente', classes: 'rounded green'});
+            $('#modal1').modal('modal-trigger')
             submit.css('display', 'inline');
             preloader.css('display', 'none');
             document.getElementById("formContact").reset()

@@ -32,6 +32,11 @@ def education(user):
 def contact(user):
     return {'user':user}
 
+#Works
+@register.inclusion_tag('tags/works.html')
+def works(user):
+    return {'user':user}
+
 #footer
 @register.inclusion_tag('tags/footer.html')
 def footer(user):

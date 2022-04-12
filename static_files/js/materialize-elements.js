@@ -15,9 +15,9 @@ $(document).ready(function(){
 });
 
 // Inicialización del Modal
-$(document).ready(function(){
-    $('.modal').modal();
-})
+// $(document).ready(function(){
+//     $('.modal').modal();
+// })
 
 // Inicialización del collapsible
 $(document).ready(function(){

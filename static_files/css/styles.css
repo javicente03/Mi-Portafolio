@@ -78,8 +78,10 @@ body{
 }
 
 .modal-content{
-    background: linear-gradient(135deg, #FFFFFF 65%, #07058F 35%);
-    background-image: url('{% static "img/check.png" %}');
+    /*background: linear-gradient(135deg, #FFFFFF 65%, #07058F 35%);*/
+    background: url('../img/check.png') no-repeat center center;
+    background-position-y: 90px;
+    background-size: 190px;
 }
 
 .navcolor{
@@ -167,13 +169,25 @@ body{
 /*Media Querys*/
 @media(max-width: 600px){
     .phone-out{
+        background-color: #FFFFFF;
+        border: 1px solid black;
+        border-radius: 1em; 
+        height: 50px;
         display: inline-block;
+        padding-top: 10px;
+        padding-left: 5px;
+        padding-right: 5px;
+        box-shadow: #2F2BFF 3px 3px 20px;
     }
 }
 
 @media(max-width: 330px){
     .modal-content > h4{
         font-size: 20px;
+    }
+
+    .about-me > h1 {
+        font-size: 40px;
     }
 }
 
@@ -194,36 +208,16 @@ body{
 }
 
 
+/*TABS ENGLISH - SPANISH*/
 
+#english {
+    display: none;
+}
 
+.lang-active {
+    background: #08034d;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.lang-active:hover{
+    background: #08034d;
+}

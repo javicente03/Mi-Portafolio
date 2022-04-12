@@ -1,0 +1,2 @@
+about-button=>About
+technologies-button=>Technologies

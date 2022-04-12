@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row about-section">
             <div class="col s12 m6" >
-                <h3 class="font-title text-right span-animate" id="contact-me">¿Quieres comunicarte conmigo?</h3>
+                <h3 class="font-title text-right">¿Quieres comunicarte conmigo?</h3>
 
                 <p class="text-right span-animate" >Escribeme todas tus dudas y sugerencias
                      en la caja de texto o también puedes escribirme a mi WhatsApp, 
@@ -36,22 +36,25 @@
                         <div class="col s12">
                             <textarea type="text" class="inputs" name="message" id="message" placeholder="Detalla tu solicitud por favor"></textarea>
                         </div>
-                        <div class="col s12 center">
+                    </div>
+                    <div class="col s12 center">
                             <button class="btn indigo darken-4 waves-effect waves-light inputs" type="submit" id="submit">Enviar
                                 <i class="material-icons left">send</i>
                             </button>
+
                             <div class="preloader-wrapper small active" style="display:none" id="preloader">
                                 <div class="spinner-layer spinner-blue-only">
                                     <div class="circle-clipper left">
                                         <div class="circle"></div>
-                                    </div><div class="gap-patch">
+                                    </div>
+                                    <div class="gap-patch">
                                         <div class="circle"></div>
-                                    </div><div class="circle-clipper right">
+                                    </div>
+                                    <div class="circle-clipper right">
                                         <div class="circle"></div>
                                     </div>
                                 </div>
                             </div>
-                        <div>
                     </div>
                     {% csrf_token %}
                 </form>

@@ -1,3 +1,4 @@
+// EVENTO DE APARICIÓN DEL TELEFONO (WhatsApp)
 var linkWs = $('#linkWs');
 
 linkWs.mouseover(function(){
@@ -9,6 +10,7 @@ linkWs.mouseout(function(){
     $("#phone").prop('class', 'phone-out');
 });
 
+// EVENTO PARA LA APARICION DEL FORMULARIO DE CONTACTO
 banderaContact = true;
 const waypoints = [
     {
@@ -30,6 +32,8 @@ waypoints.forEach(({ id, handler }) => (
     })
 ));
 
+
+// EVENTO PARA LA APARICION DINAMICA DEL NOMBRE PRINCIPAL DEL PORTAFOLIO (ING. JAVIER GERARDO)
 let developerName = document.getElementById("developerName");
 developerName.innerHTML = developerName.innerText.split("").map(function(char){
     if(char == " "){
@@ -94,13 +98,37 @@ function presentationText(words, id){
             visible = true
         }
     }, 400)
-
-    $( document ).ready(function() {
-        $('#modal1').modal('modal-trigger')
-    });
 }
 
 
-function kk(){
-    alert("ooo")
-}
+
+// EVENTO PARA EL CAMBIO DE IDIOMA
+// $("#lang_english").click(function(e){
+//     $("#lang_spanish").prop("class", '')
+//     $(this).prop("class", 'lang-active')
+//     $("#spanish").css("display","none")
+//     $("#english").css("display","initial")
+//     // ALTERO EL MENU
+//     document.querySelector("#lang_spanish span").innerHTML = "Spanish"
+//     document.querySelector("#lang_english span").innerHTML = "English"
+//     document.querySelector("#about-button").innerHTML = "About"
+//     document.querySelector("#technologies-button").innerHTML = "Technologies"
+//     document.querySelector("#works-button").innerHTML = "Works"
+//     document.querySelector("#education-button").innerHTML = "Education"
+//     document.querySelector("#contact-button").innerHTML = "Contact"
+// })
+
+// $("#lang_spanish").click(function(e){
+//     $("#lang_english").prop("class", '')
+//     $(this).prop("class", 'lang-active')
+//     $("#english").css("display","none")
+//     $("#spanish").css("display","initial")
+//     // ALTERO EL MENU
+//     document.querySelector("#lang_spanish span").innerHTML = "Español"
+//     document.querySelector("#lang_english span").innerHTML = "Inglés"
+//     document.querySelector("#about-button").innerHTML = "Sobre mí"
+//     document.querySelector("#technologies-button").innerHTML = "Tecnologías"
+//     document.querySelector("#works-button").innerHTML = "Trabajos"
+//     document.querySelector("#education-button").innerHTML = "Educación"
+//     document.querySelector("#contact-button").innerHTML = "Contáctame"
+// })

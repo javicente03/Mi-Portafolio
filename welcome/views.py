@@ -39,9 +39,10 @@ class Contact(View):
 
             subject = "Mensaje enviado de "+name+" | "+email
             email = Email()
-            if email.send_email(subject, message, EMAIL_HOST_USER):
+            try:
+                email.send_email(subject, message, EMAIL_HOST_USER)
                 return HttpResponse(status=200)
-            else:
+            except:
                 return HttpResponse("Error: Lo siento, tu mensaje no ha podido enviarse", status=400)                
         else:
             return HttpResponse("Error: por favor revisa tus datos", status=400)
