@@ -1,38 +1,62 @@
 $("#lang_english").click(function(e){
-  lang = "en"
-  var loadLang = function(lang){
-    var processLang = function(data){
-      var arr = data.split('\n');
-      for(var i in arr){
-        if( lineValid(arr[i]) ){
-          var obj = arr[i].split('=>');
-          assignText(obj[0], obj[1]);
-        }
-      }
-    };
-    var assignText = function(key, value){
-      $('[data-lang="'+key+'"]').each(function(){
-        var attr = $(this).attr('data-destine');
-        if(typeof attr !== 'undefined'){
-          $(this).attr(attr, value);
-        }else{
-          $(this).html(value);
-        }
-      });
-    };
-    var lineValid = function(line){
-      return (line.trim().length > 0);
-    };
     // $('.loading-lang').addClass('show');
     $.ajax({
-      url: 'translate/'+lang+'.txt',
+      url: '/static/languages/en.txt',
       error:function(){
         alert('No se cargó traducción');
       },
       success: function(data){
         // $('.loading-lang').removeClass('show');
         processLang(data);
+        $("#name").prop("placeholder", "Tell me your name")
+        $("#email").prop("placeholder", "Give me your email")
+        $("#message").prop("placeholder", "Please detail your request.")
+        presentationObject.setWords(textEnglish)
       }
     });
-  };  
-})
+});
+
+$("#lang_spanish").click(function(e){
+    // $('.loading-lang').addClass('show');
+    $.ajax({
+      url: '/static/languages/es.txt',
+      error:function(){
+        alert('No se cargó traducción');
+      },
+      success: function(data){
+        // $('.loading-lang').removeClass('show');
+        processLang(data);
+        $("#name").prop("placeholder", "Dime tu nombre")
+        $("#email").prop("placeholder", "Indícame tu correo electrónico")
+        $("#message").prop("placeholder", "Detalla tu solicitud por favor")
+        presentationObject.setWords(textSpanish)
+      }
+    });
+});
+
+
+function processLang(data){
+  var arr = data.split('\n');
+  for(var i in arr){
+    if( lineValid(arr[i]) ){
+      var obj = arr[i].split('=>');
+      assignText(obj[0], obj[1]);
+    }
+  }
+};
+
+
+function assignText(key, value){
+  $('[data-lang="'+key+'"]').each(function(){
+    var attr = $(this).attr('data-destine');
+    if(typeof attr !== 'undefined'){
+      $(this).attr(attr, value);
+    }else{
+      $(this).html(value);
+    }
+  });
+};
+
+function lineValid(line){
+  return (line.trim().length > 0);
+};

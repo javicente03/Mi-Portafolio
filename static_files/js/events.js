@@ -45,19 +45,7 @@ developerName.innerHTML = developerName.innerText.split("").map(function(char){
 
 
 // TEXTO DE PRESENTACIÓN DINAMICO
-text1 = "Ingeniero de sistemas, con un año de experiencia en el desarrollo web, \
-        tengo conocimientos de las tecnologías Python, \
-        Php, Java, JavaScript, HTML, CSS, MySQL y PostgreSQL, especializado en el \
-        desarrollo y consumo de APIs Rest y Web Scraping."
-
-text2 = "Si deseas un software \
-        a medida puedes contactarme."
-
-text3 = "Estoy en constante aprendizaje \
-        y crecimiento profesional y personal."
-
-presentationText([text1, text2, text3])
-function presentationText(words, id){
+var presentationText = function(words){
     var visible = true
     var con = document.getElementById("presentation")
     var letterCount = 1
@@ -98,37 +86,13 @@ function presentationText(words, id){
             visible = true
         }
     }, 400)
+
+    return {
+        setWords: function(newWords) {
+            words = newWords;
+        },
+    }
 }
 
 
-
-// EVENTO PARA EL CAMBIO DE IDIOMA
-// $("#lang_english").click(function(e){
-//     $("#lang_spanish").prop("class", '')
-//     $(this).prop("class", 'lang-active')
-//     $("#spanish").css("display","none")
-//     $("#english").css("display","initial")
-//     // ALTERO EL MENU
-//     document.querySelector("#lang_spanish span").innerHTML = "Spanish"
-//     document.querySelector("#lang_english span").innerHTML = "English"
-//     document.querySelector("#about-button").innerHTML = "About"
-//     document.querySelector("#technologies-button").innerHTML = "Technologies"
-//     document.querySelector("#works-button").innerHTML = "Works"
-//     document.querySelector("#education-button").innerHTML = "Education"
-//     document.querySelector("#contact-button").innerHTML = "Contact"
-// })
-
-// $("#lang_spanish").click(function(e){
-//     $("#lang_english").prop("class", '')
-//     $(this).prop("class", 'lang-active')
-//     $("#english").css("display","none")
-//     $("#spanish").css("display","initial")
-//     // ALTERO EL MENU
-//     document.querySelector("#lang_spanish span").innerHTML = "Español"
-//     document.querySelector("#lang_english span").innerHTML = "Inglés"
-//     document.querySelector("#about-button").innerHTML = "Sobre mí"
-//     document.querySelector("#technologies-button").innerHTML = "Tecnologías"
-//     document.querySelector("#works-button").innerHTML = "Trabajos"
-//     document.querySelector("#education-button").innerHTML = "Educación"
-//     document.querySelector("#contact-button").innerHTML = "Contáctame"
-// })
+var presentationObject = presentationText(textSpanish)

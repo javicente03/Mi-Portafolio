@@ -210,10 +210,6 @@ body{
 
 /*TABS ENGLISH - SPANISH*/
 
-#english {
-    display: none;
-}
-
 .lang-active {
     background: #08034d;
 }

@@ -1,0 +1,23 @@
+english-button=>Inglés
+spanish-button=>Español
+about-button=>Sobre mí
+technologies-button=>Tecnologías
+works-button=>Trabajos
+education-button=>Educación
+contact-button=>Contáctame
+
+text-hi=>Hola soy
+engineering=>Ing. Javier Gerardo
+welcome=>Bienvenido a mi portafolio
+download=>DESCARGA MI CV
+
+technologies-title=>TECNOLOGÍAS
+
+works-title=>Trabajos y proyectos realizados
+
+education-title=>EDUCACIÓN
+career=>Ingeniería de Sistemas
+
+contact-title=>¿Quieres comunicarte conmigo?
+write-me=>Escribeme todas tus dudas y sugerencias en la caja de texto o también puedes escribirme a mi WhatsApp, te aseguro que me pondré en contacto contigo lo más pronto posible
+send-contact=><i class="material-icons left">send</i>Enviar

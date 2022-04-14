@@ -1,5 +1,5 @@
 $("#lang_english").click(function(e){
-    $('.loading-lang').addClass('show');
+    // $('.loading-lang').addClass('show');
     $.ajax({
       url: '/static/languages/en.txt',
       error:function(){
@@ -8,9 +8,30 @@ $("#lang_english").click(function(e){
       success: function(data){
         // $('.loading-lang').removeClass('show');
         processLang(data);
+        $("#name").prop("placeholder", "Tell me your name")
+        $("#email").prop("placeholder", "Give me your email")
+        $("#message").prop("placeholder", "Please detail your request.")
+        presentationObject.setWords(textEnglish)
       }
     });
-    console.log("KKK")
+});
+
+$("#lang_spanish").click(function(e){
+    // $('.loading-lang').addClass('show');
+    $.ajax({
+      url: '/static/languages/es.txt',
+      error:function(){
+        alert('No se cargó traducción');
+      },
+      success: function(data){
+        // $('.loading-lang').removeClass('show');
+        processLang(data);
+        $("#name").prop("placeholder", "Dime tu nombre")
+        $("#email").prop("placeholder", "Indícame tu correo electrónico")
+        $("#message").prop("placeholder", "Detalla tu solicitud por favor")
+        presentationObject.setWords(textSpanish)
+      }
+    });
 });
 
 
@@ -20,7 +41,6 @@ function processLang(data){
     if( lineValid(arr[i]) ){
       var obj = arr[i].split('=>');
       assignText(obj[0], obj[1]);
-      // console.log("II")
     }
   }
 };
