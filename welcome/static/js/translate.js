@@ -7,11 +7,13 @@ $("#lang_english").click(function(e){
       },
       success: function(data){
         // $('.loading-lang').removeClass('show');
+        $("#lang_spanish").removeClass("lang-active");
+        $("#lang_english").addClass("lang-active");
         processLang(data);
-        $("#name").prop("placeholder", "Tell me your name")
-        $("#email").prop("placeholder", "Give me your email")
-        $("#message").prop("placeholder", "Please detail your request.")
-        presentationObject.setWords(textEnglish)
+        $("#name").prop("placeholder", "Tell me your name");
+        $("#email").prop("placeholder", "Give me your email");
+        $("#message").prop("placeholder", "Please detail your request.");
+        presentationObject.setWords(textEnglish);
       }
     });
 });
@@ -25,6 +27,8 @@ $("#lang_spanish").click(function(e){
       },
       success: function(data){
         // $('.loading-lang').removeClass('show');
+        $("#lang_english").removeClass("lang-active");
+        $("#lang_spanish").addClass("lang-active");
         processLang(data);
         $("#name").prop("placeholder", "Dime tu nombre")
         $("#email").prop("placeholder", "Indícame tu correo electrónico")

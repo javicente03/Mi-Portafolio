@@ -27,6 +27,11 @@ def technologies(user):
 def education(user):
     return {'user':user}
 
+#Services
+@register.inclusion_tag('tags/services.html')
+def services(user):
+    return {'user':user}
+
 #Contact
 @register.inclusion_tag('tags/contact.html')
 def contact(user):

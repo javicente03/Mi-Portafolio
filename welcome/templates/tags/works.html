@@ -1,3 +1,4 @@
+{% load static %}
 <div id="works" class="scrollspy">
 	<div class="container">
 		<div class="row">
@@ -5,7 +6,84 @@
                 <h3 class="font-title text-right" data-lang="works-title">Trabajos y proyectos realizados</h3>
 			</div>
 			<div class="col s12">
-				
+				<ul class="collapsible popout">
+				    <li>
+				      	<div class="collapsible-header">
+				      		<div class="row" style="width:100%">
+				      			<div class="col s3 m2 l1">
+				      				<img src="{% static 'img/php.png' %}" class="responsive-img">    				
+				      			</div>
+				      			<div class="col s9 m10 l11" data-lang="work1-title">
+							     	Sistema de gestión administrativo para Corpotulipa 
+							     	(Trabajo Especial de Grado)
+				      			</div>
+					      	</div>
+					    </div>
+				      	<div class="collapsible-body">
+				      		<div class="row">
+				      			<div class="col s12">
+						      		<span data-lang="work1-def">
+							      		Trabajo especial de grado como requisito para optar al título de Ingeniero de Sistemas.
+							      		Sistema desarrollado en el lenguaje Php conectado a una base de datos MySQL, dirigido a las
+							      		oficinas de Recursos Humanos y Administración y Finanzas de CORPOTULIPA (Falcón, Venezuela),
+							      		consta de 3 módulos (Caja chica, Préstamo de bienes muebles, Solicitudes de permiso y adiestramientos). Para el frontend se optó por usar el framework Materialize CSS, debido a su gala de herramientas para un diseño intuitivo y agradable, así como JavaScript Vanilla.
+							      	</span>
+							    </div>
+				      			<div class="col s12">
+				      				<img src="{% static 'img/corpotulipa.png' %}" class="responsive-img">
+				      			</div>
+							</div>
+					    </div>
+				    </li>
+				    <li>
+					    <div class="collapsible-header">
+				      		<div class="row" style="width:100%">
+				      			<div class="col s3 m2 l1">
+				      				<img src="{% static 'img/django.png' %}" class="responsive-img">    				
+				      			</div>
+				      			<div class="col s9 m10 l11" data-lang="work2-title">
+							     	Panel de integración Amazon - Mercado Libre 				
+				      			</div>
+					      	</div>
+					    </div>
+				      	<div class="collapsible-body">
+				      		<div class="row">
+				      			<div class="col s12">
+				      				<span data-lang="work2-def">
+							      		Sistema de gestión para cuentas de mercado libre realizado en Django, consumiendo
+							      		el API proporcionado por Mercado Libre y llevando a cabo un scraping a Amazon, este
+							      		software permite a sus usuarios publicar articulos en masa a su cuenta de ML, 
+							      		configurando todo lo relacionado a su producto (precio, categoria, atributos)
+							      		con suma facilidad. Igualmente el sistema posee la cualidad de responder preguntas
+							      		realizadas en las publicaciones en seguimiento de manera automática.
+							      	</span>
+				      			</div>
+				      			<div class="col s12">
+					      			<img class="responsive-img" src="{% static 'img/mercadoama.png' %}">
+				      			</div>
+				      		</div>
+					    </div>
+				    </li>
+				    <li>
+				      	<div class="collapsible-header">
+				      		<div class="row" style="width:100%">
+				      			<div class="col s3 m2 l1">
+				      				<img src="{% static 'img/drf.png' %}" class="responsive-img">    				
+				      			</div>
+				      			<div class="col s9 m10 l11" data-lang="work3-title">
+							     	Backend de Aplicación para venta de lotería	      				
+				      			</div>
+					      	</div>
+					    </div>
+				      	<div class="collapsible-body">
+				      		<span data-lang="work3-def">
+					      		Desarrollado mediante la tecnología de Django Rest Framework, esta API permite
+					      		a su cliente gestionar los datos de una venta de lotería, gastando puntos locales del
+					      		sistema.
+					      	</span>
+					    </div>
+				    </li>
+				 </ul>
 			</div>
 		</div>
 	</div>
