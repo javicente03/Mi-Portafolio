@@ -11,6 +11,13 @@ engineering=>P.E. Javier Gerardo
 welcome=>Welcome to my portfolio
 download=>DOWNLOAD MY CV
 
+service-title=>Services
+service-software=>Custom Software
+service-software-def=>Do you want software to manage your company? I can develop just what you need, from a web application to a desktop.
+service-scraping-def=>If you need to extract content from a website, do not hesitate to contact me.
+service-api=>Rest API Development
+service-api-def=>Don't think about it anymore, let's take your project to the next level. I will develop an API adjusted to your needs.
+
 technologies-title=>TECHNOLOGIES
 
 works-title=>Works and projects carried out

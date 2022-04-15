@@ -11,6 +11,13 @@ engineering=>Ing. Javier Gerardo
 welcome=>Bienvenido a mi portafolio
 download=>DESCARGA MI CV
 
+service-title=>Servicios
+service-software=>Software a Medida
+service-software-def=>¿Deseas un software para gestionar tu empresa? Puedo desarrollar justo lo que necesitas, desde una aplicación web a un desktop.
+service-scraping-def=>Si necesitas extraer contenido de una web, no dudes en contactarme.
+service-api=>Desarrollo de APIs Rest
+service-api-def=>No lo pienses más, llevemos tu proyecto al otro nivel. Desarrollaré un Api ajustada a tus necesidades.
+
 technologies-title=>TECNOLOGÍAS
 
 works-title=>Trabajos y proyectos realizados

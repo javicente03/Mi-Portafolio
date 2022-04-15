@@ -23,3 +23,13 @@ $(document).ready(function(){
 $(document).ready(function(){
     $('.collapsible').collapsible();
 });
+
+// Inicialización del tooltip
+$(document).ready(function(){
+    $('.tooltipped').tooltip();
+});
+
+// Inicialización del Sidenav
+$(document).ready(function(){
+    $('.sidenav').sidenav();
+});

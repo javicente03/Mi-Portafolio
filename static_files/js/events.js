@@ -29,7 +29,7 @@ waypointsServices.forEach(({ id, handler }) => (
     new Waypoint({
         element: document.getElementById(id),
         handler,
-        offset: 500 // añade un margen superior opcional
+        offset: 480 // añade un margen superior opcional
     })
 ));
 

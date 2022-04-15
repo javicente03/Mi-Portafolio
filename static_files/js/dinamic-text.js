@@ -1,5 +1,5 @@
 var text1 = "Systems engineer, with one year of experience in web development, \
-        I have knowledge of Python technologies, \
+        I have knowledge of technologies, Python\
         Php, Java, JavaScript, HTML, CSS, MySQL and PostgreSQL, specializing in the \
         development and consumption of APIs Rest and Web Scraping."
 var text2 = "If you want a software as you can contact me."

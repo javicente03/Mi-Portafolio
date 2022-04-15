@@ -1,20 +1,22 @@
 {% load static %}
-<div class="container scrollpy" id="services">
+<div class="container scrollspy" id="services">
+    <h3 data-lang="service-title" class="font-title text-right" data-lang="contact-title">Servicios</h3>
+
 	<div class="row center">
 		<div class="col s12 m4 services">
 			<img class="responsive-img" src="{% static 'img/software_medida.png' %}">
-			<h5>Software a Medida</h5>
-			<p>¿Deseas un software para gestionar tu empresa? Puedo desarrollar justo lo que necesitas, desde una aplicación web a un desktop.</p>
+			<h5 data-lang="service-software">Software a Medida</h5>
+			<p data-lang="service-software-def">¿Deseas un software para gestionar tu empresa? Puedo desarrollar justo lo que necesitas, desde una aplicación web a un desktop.</p>
 		</div>
 		<div class="col s12 m4 services">
 			<img class="responsive-img" src="{% static 'img/scraping.png' %}">
 			<h5>Web Scraping</h5>
-			<p>Si necesitas extraer contenido de una web, no dudes en contactarme.</p>
+			<p data-lang="service-scraping-def">Si necesitas extraer contenido de una web, no dudes en contactarme.</p>
 		</div>
 		<div class="col s12 m4 services">
 			<img class="responsive-img" src="{% static 'img/api.png' %}">
-			<h5>Desarrollo de APIs Rest</h5>
-			<p>No lo pienses más, llevemos tu proyecto al otro nivel. Desarrollaré un Api ajustada a tus necesidades.</p>
+			<h5 data-lang="service-api">Desarrollo de APIs Rest</h5>
+			<p data-lang="service-api-def">No lo pienses más, llevemos tu proyecto al otro nivel. Desarrollaré un Api ajustada a tus necesidades.</p>
 		</div>
 	</div>
 </div>

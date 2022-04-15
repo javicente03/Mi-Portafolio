@@ -85,7 +85,11 @@ body{
 }
 
 .navcolor{
-    background: linear-gradient(90deg, #2F2BFF 10%, #07058F 25%);
+    background-image: radial-gradient(circle at -19.64% 37.72%, #5894cf 0, #222831 50%, #000000 100%);
+}
+
+.options-menu > li > a:hover{
+    background: #222831;
 }
 
 .phone {
@@ -108,15 +112,19 @@ body{
     box-shadow: black 2px 2px 2px;
 }
 
-.s8 > a{
-    background: #1310DB;
+.btn-download{
+    background: #333a46;
     border-radius: .5em;
     font-weight: bold;
     transition: ease-in-out .2s;
 }
 
-.s8 > a:hover{
-    background: #201cfc;
+.btn-download{
+    background: #333a46;
+}
+
+.btn-download:hover{
+    background: #2c333d;
 }
 
 .s2 > a > img:hover{
@@ -236,9 +244,9 @@ body{
 /*TABS ENGLISH - SPANISH*/
 
 .lang-active {
-    background: #08034d;
+    background: #222831;
 }
 
 .lang-active:hover{
-    background: #08034d;
+    background: #222831;
 }

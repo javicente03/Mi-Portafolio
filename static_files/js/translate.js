@@ -3,7 +3,7 @@ $("#lang_english").click(function(e){
     $.ajax({
       url: '/static/languages/en.txt',
       error:function(){
-        alert('No se cargó traducción');
+        M.toast({html: 'No se cargó la traducción', classes: 'rounded red'});
       },
       success: function(data){
         // $('.loading-lang').removeClass('show');
@@ -23,7 +23,7 @@ $("#lang_spanish").click(function(e){
     $.ajax({
       url: '/static/languages/es.txt',
       error:function(){
-        alert('No se cargó traducción');
+        M.toast({html: 'No se cargó la traducción', classes: 'rounded red'});
       },
       success: function(data){
         // $('.loading-lang').removeClass('show');

@@ -6,18 +6,12 @@ let phone = anime({
 });
 
 // ANIMACIÓN DE LOS SERVICIOS
-let services = anime.timeline({
+let services = anime({
   targets: '.services',
   opacity: [.2, .4, .6, .8, 1],
   translateY:10,
-  delay: anime.stagger(250),
+  delay: anime.stagger(300),
   autoplay: false
-});
-
-services.add({
-  targets: '.services',
-  rotate: 45,
-  loop:true,
 });
 
 // ANIMACIÓN DEL FORMULARIO DE CONTACTO
