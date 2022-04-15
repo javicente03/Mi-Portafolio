@@ -15,7 +15,7 @@ environ.Env.read_env()
 SECRET_KEY = 'django-insecure-&z(nfj@s2#iq$@+nb(c-!gs_m101-$x8v14an&^7_gr&0o09%8'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 # EMAIL
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
@@ -122,11 +122,11 @@ USE_TZ = True
 
 # STATIC_URL = 'static/'
 # STATIC_ROOT=  BASE_DIR / 'static_files/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, 'static_files'),
 )
 
 # Default primary key field type
