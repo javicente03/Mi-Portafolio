@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'welcome'
 ]
 
+CORS_ORIGIN_ALLOW_ALL = True
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -51,10 +53,6 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     # 'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
-
-CORS_ORIGIN_WHITELIST = (
-  'https://pacific-coast-78888.herokuapp.com',
-)
 
 ROOT_URLCONF = 'portafolio.urls'
 
