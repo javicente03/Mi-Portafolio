@@ -15,7 +15,7 @@ environ.Env.read_env()
 SECRET_KEY = 'django-insecure-&z(nfj@s2#iq$@+nb(c-!gs_m101-$x8v14an&^7_gr&0o09%8'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 # EMAIL
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
