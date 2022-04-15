@@ -3,7 +3,7 @@ $("#lang_english").click(function(e){
     $.ajax({
       url: '/static/languages/en.txt',
       error:function(){
-        M.toast({html: 'No se cargó la traducción', classes: 'rounded red'});
+        M.toast({html: 'No se pudo cargar la traducción', classes: 'rounded red'});
       },
       success: function(data){
         // $('.loading-lang').removeClass('show');
@@ -14,6 +14,7 @@ $("#lang_english").click(function(e){
         $("#email").prop("placeholder", "Give me your email");
         $("#message").prop("placeholder", "Please detail your request.");
         presentationObject.setWords(textEnglish);
+        language = 'en';
       }
     });
 });
@@ -23,7 +24,7 @@ $("#lang_spanish").click(function(e){
     $.ajax({
       url: '/static/languages/es.txt',
       error:function(){
-        M.toast({html: 'No se cargó la traducción', classes: 'rounded red'});
+        M.toast({html: 'Failed to load translation', classes: 'rounded red'});
       },
       success: function(data){
         // $('.loading-lang').removeClass('show');
@@ -34,6 +35,7 @@ $("#lang_spanish").click(function(e){
         $("#email").prop("placeholder", "Indícame tu correo electrónico")
         $("#message").prop("placeholder", "Detalla tu solicitud por favor")
         presentationObject.setWords(textSpanish)
+        language = 'es';
       }
     });
 });

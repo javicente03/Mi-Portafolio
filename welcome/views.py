@@ -35,7 +35,7 @@ class Contact(View):
                 valid_email = False
 
             if not valid_email:
-                return HttpResponse("Error: correo inválido", status=400)
+                return HttpResponse(status=409)
 
             subject = "Mensaje enviado de "+name+" | "+email
             email = Email()
@@ -43,6 +43,6 @@ class Contact(View):
                 email.send_email(subject, message, EMAIL_HOST_USER)
                 return HttpResponse(status=200)
             except:
-                return HttpResponse("Error: Lo siento, tu mensaje no ha podido enviarse", status=400)                
+                return HttpResponse(status=500)                
         else:
-            return HttpResponse("Error: por favor revisa tus datos", status=400)
+            return HttpResponse(status=400)

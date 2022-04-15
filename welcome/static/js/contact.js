@@ -17,7 +17,23 @@ $("#formContact").submit(function(e) {
             document.getElementById("formContact").reset()
         },
         error: function (data) {
-            M.toast({html: data.responseText, classes: 'rounded red'});
+            if(language=="en"){
+                if(data.status==0 || data.status==500){
+                    M.toast({html: "Error: Sorry, your message could not be sent", classes: 'rounded red'});
+                } else if(data.status==400){
+                    M.toast({html: "Error: Please check your data", classes: 'rounded red'});
+                } else if(data.status==409){
+                    M.toast({html: "Error: Invalid email", classes: 'rounded red'});
+                }
+            } else {
+                if(data.status==0 || data.status==500){
+                    M.toast({html: "Error: Lo siento, tu mensaje no ha podido enviarse", classes: 'rounded red'});
+                } else if(data.status==400){
+                    M.toast({html: "Error: Por favor revisa tus datos", classes: 'rounded red'});
+                } else if(data.status==409){
+                    M.toast({html: "Error: Correo inválido", classes: 'rounded red'});
+                }
+            }
             submit.css('display', 'inline');
             preloader.css('display', 'none');
         }
