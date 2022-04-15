@@ -1,1 +1,1 @@
-web: gunicorn portafolio.wsgi --log-file -
+web: python myapp/manage.py collectstatic --noinput; runserver 0.0.0.0:$PORT
