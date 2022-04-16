@@ -158,21 +158,6 @@ body{
     opacity: 0;
 }
 
-.wb-img {
-    filter: url("data:image/svg xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10 */
-    filter: gray; /*IE6-9*/
-    -webkit-filter: grayscale(100%); /*Chrome 19+ & Safari 6+*/
-    -webkit-transition: all .5s ease; /*Fade to color for Chrome and Safari*/
-    -moz-transition: all .5s ease;
-    -webkit-backface-visibility: hidden; /*Fix for transition flickering*/
-    width: 100%;
-    height: 100%;
-}
-
-.wb-img:hover {
-    filter: none;
-    -webkit-filter: grayscale(0%);
-}
 
 #about-before{
     background:  linear-gradient(90deg, #222831 70%, #ffffff 200%);    
@@ -198,6 +183,24 @@ body{
 
 #contact > .container > .row > .col {
     text-align: right;
+}
+
+@media(min-width: 600px){
+    .wb-img {
+        filter: url("data:image/svg xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10 */
+        filter: gray; /*IE6-9*/
+        -webkit-filter: grayscale(100%); /*Chrome 19+ & Safari 6+*/
+        -webkit-transition: all .5s ease; /*Fade to color for Chrome and Safari*/
+        -moz-transition: all .5s ease;
+        -webkit-backface-visibility: hidden; /*Fix for transition flickering*/
+        width: 100%;
+        height: 100%;
+    }
+
+    .wb-img:hover {
+        filter: none;
+        -webkit-filter: grayscale(0%);
+    }
 }
 
 /*Media Querys*/

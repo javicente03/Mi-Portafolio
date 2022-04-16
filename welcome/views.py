@@ -18,7 +18,7 @@ from panel.views import Message
 #         return 0
 
 class Welcome(TemplateView):
-    template_name = 'welcome.html'
+    template_name = 'index.html'
 
 class Contact(View):
     def post(self, request):

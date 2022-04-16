@@ -6,7 +6,6 @@ $("#lang_english").click(function(e){
         M.toast({html: 'No se pudo cargar la traducción', classes: 'rounded red'});
       },
       success: function(data){
-        // $('.loading-lang').removeClass('show');
         $("#lang_spanish").removeClass("lang-active");
         $("#lang_english").addClass("lang-active");
         processLang(data);
@@ -17,6 +16,7 @@ $("#lang_english").click(function(e){
         language = 'en';
         $("#cv1").prop('href', "/static/files/Curriculum Javier Gerardo Inglés.pdf");
         $("#cv2").prop('href', "/static/files/Curriculum Javier Gerardo Inglés.pdf");
+        $('html').attr('lang', "en");
       }
     });
 });
@@ -29,7 +29,6 @@ $("#lang_spanish").click(function(e){
         M.toast({html: 'Failed to load translation', classes: 'rounded red'});
       },
       success: function(data){
-        // $('.loading-lang').removeClass('show');
         $("#lang_english").removeClass("lang-active");
         $("#lang_spanish").addClass("lang-active");
         processLang(data);
@@ -40,6 +39,7 @@ $("#lang_spanish").click(function(e){
         language = 'es';
         $("#cv1").prop('href', "/static/files/Curriculum Javier Gerardo.pdf");
         $("#cv2").prop('href', "/static/files/Curriculum Javier Gerardo.pdf");
+        $('html').attr('lang', "es");
       }
     });
 });
