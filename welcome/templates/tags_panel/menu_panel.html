@@ -1,0 +1,23 @@
+{% load static %}
+<div class="navbar-fixed">
+    <nav>
+        <div class="nav-wrapper navcolor fixed">
+            <div class="contenedor-nav">
+                <ul class="left">
+                    <li><a>
+                        <span >Javier_Gerardo.dev</span></a></li>
+                </ul>
+
+                {% if user.is_authenticated %}
+                <ul class="right">
+                    <li><a href="{% url 'list-pending-message' %}">Pendientes</a></li>
+                    <li><a href="{% url 'list-read-message' %}">Leídos</a></li>
+
+                    <li><a href="/logout/">Salir</a></li>
+                </ul>
+                {% endif %}
+                
+            </div>
+        </div>
+    </nav>
+</div>

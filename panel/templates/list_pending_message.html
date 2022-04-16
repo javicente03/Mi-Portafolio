@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block main %}
+	<div class="container">
+		<div class="row">
+			<div class="col s12">
+				<h4>Mensajes Pendientes</h4>
+				<table id="table">
+					<thead>
+						<th>Nombre</th>
+						<th>Email</th>
+						<th>Fecha</th>
+						<th>Ver</th>
+					</thead>
+					<tbody>
+						{% for m in object_list %}
+							<tr>
+								<td>{{m.name}}</td>
+								<td>{{m.email}}</td>
+								<td>{{m.creation_date | date:'Y-m-d'}}</td>
+								<td><a href="{% url 'message-detail' pk=m.pk %}" class="btn indigo darken-4">
+									<i class="material-icons">visibility</i></a></td>
+							</tr>
+						{% endfor %}
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+{% endblock main %}
+
+{% block js %}
+	<script>
+		$(document).ready(function() {
+            $('#table').DataTable({
+                "language": {
+                    "lengthMenu": "Display _MENU_ records per page",
+                    "zeroRecords": "No hay data encontrada",
+                    "info": "Total: _MAX_ resultados",
+                    "infoEmpty": "No hay coincidencias",
+                    "infoFiltered": "",
+                    "search": "Buscar:",
+                    "paginate": {
+                        "first": "Primero",
+                        "last": "Ultimo",
+                        "next": "Siguiente",
+                        "previous": "Anterior"
+                    }
+                }
+            });
+        });
+	</script>
+{% endblock js %}

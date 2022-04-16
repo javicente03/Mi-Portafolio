@@ -6,17 +6,17 @@ works-button=>Trabajos
 education-button=>Educación
 contact-button=>Contáctame
 
-text-hi=>Hola soy
+text-hi=>Hola Mundo
 engineering=>Ing. Javier Gerardo
 welcome=>Bienvenido a mi portafolio
 download=>DESCARGA MI CV
 
 service-title=>Servicios
 service-software=>Software a Medida
-service-software-def=>¿Deseas un software para gestionar tu empresa? Puedo desarrollar justo lo que necesitas, desde una aplicación web a un desktop.
+service-software-def=>¿Deseas un software para gestionar tu empresa? Puedo desarrollar justo lo que necesitas, desde una aplicación web a una de escritorio.
 service-scraping-def=>Si necesitas extraer contenido de una web, no dudes en contactarme.
 service-api=>Desarrollo de APIs Rest
-service-api-def=>No lo pienses más, llevemos tu proyecto al otro nivel. Desarrollaré un Api ajustada a tus necesidades.
+service-api-def=>No lo pienses más, llevemos tu proyecto al siguiente nivel. Desarrollaré un Api ajustada a tus necesidades.
 
 technologies-title=>TECNOLOGÍAS
 
@@ -30,6 +30,11 @@ work3-def=>Desarrollado mediante la tecnología de Django Rest Framework, esta A
 
 education-title=>EDUCACIÓN
 career=>Ingeniería de Sistemas
+function-title=>Avanzar
+function-var=>Objetivos
+function-var-def=>"Son variables"
+function-const=>Aprendizaje
+function-const-def=>"Es constante"
 
 contact-title=>¿Quieres comunicarte conmigo?
 write-me=>Escribeme todas tus dudas y sugerencias en la caja de texto o también puedes escribirme a mi WhatsApp, te aseguro que me pondré en contacto contigo lo más pronto posible

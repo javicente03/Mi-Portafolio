@@ -17,14 +17,19 @@ SECRET_KEY = 'django-insecure-&z(nfj@s2#iq$@+nb(c-!gs_m101-$x8v14an&^7_gr&0o09%8
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 # EMAIL
-EMAIL_USE_TLS = True
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'javicentego@gmail.com'
-EMAIL_HOST_PASSWORD = 'javileon03*'
-EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_HOST_USER = 'javicentego@gmail.com'
+# EMAIL_HOST_PASSWORD = 'javileon03*'
+# EMAIL_PORT = 587
 
 # ALLOWED_HOSTS = tuple(env.list('ALLOWED_HOSTS', default=[]))
 ALLOWED_HOSTS = ['*']
+
+LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_URL = 'logout'
+LOGOUT_REDIRECT_URL = 'login'
 
 
 # Application definition
@@ -37,7 +42,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'corsheaders',
-    'welcome'
+    'welcome',
+    'panel',
+    'userprofile'
 ]
 
 CORS_ORIGIN_ALLOW_ALL = True
@@ -78,6 +85,7 @@ WSGI_APPLICATION = 'portafolio.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+# HEROKU
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -88,6 +96,18 @@ DATABASES = {
         'PORT': '5432',
     }
 }
+
+# LOCAL
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'portafolio_bd',
+#         'HOST': 'localhost',
+#         'USER': 'postgres',        
+#         'PASSWORD': '1234',
+#         'PORT': '5432',
+#     }
+# }
 
 
 # Password validation
@@ -126,11 +146,11 @@ USE_TZ = True
 
 # STATIC_URL = 'static/'
 # STATIC_ROOT=  BASE_DIR / 'static_files/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static_files')
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static_files'),
+    os.path.join(BASE_DIR, 'static'),
 )
 
 # Default primary key field type

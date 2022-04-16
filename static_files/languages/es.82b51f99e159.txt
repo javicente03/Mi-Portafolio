@@ -1,0 +1,41 @@
+english-button=>Inglés
+spanish-button=>Español
+about-button=>Sobre mí
+technologies-button=>Tecnologías
+works-button=>Trabajos
+education-button=>Educación
+contact-button=>Contáctame
+
+text-hi=>Hola soy
+engineering=>Ing. Javier Gerardo
+welcome=>Bienvenido a mi portafolio
+download=>DESCARGA MI CV
+
+service-title=>Servicios
+service-software=>Software a Medida
+service-software-def=>¿Deseas un software para gestionar tu empresa? Puedo desarrollar justo lo que necesitas, desde una aplicación web a un desktop.
+service-scraping-def=>Si necesitas extraer contenido de una web, no dudes en contactarme.
+service-api=>Desarrollo de APIs Rest
+service-api-def=>No lo pienses más, llevemos tu proyecto al otro nivel. Desarrollaré un Api ajustada a tus necesidades.
+
+technologies-title=>TECNOLOGÍAS
+
+works-title=>Trabajos y proyectos realizados
+work1-title=>Sistema de gestión administrativo para Corpotulipa (Trabajo Especial de Grado) 
+work1-def=>Trabajo especial de grado como requisito para optar al título de Ingeniero de Sistemas. Sistema desarrollado en el lenguaje Php conectado a una base de datos MySQL, dirigido a las oficinas de Recursos Humanos y Administración y Finanzas de CORPOTULIPA (Falcón, Venezuela), consta de 3 módulos (Caja chica, Préstamo de bienes muebles, Solicitudes de permiso y adiestramientos). Para el frontend se optó por usar el framework Materialize CSS, debido a su gala de herramientas para un diseño intuitivo y agradable, así como JavaScript Vanilla.
+work2-title=>Panel de integración (Amazon - Mercado Libre)
+work2-def=>Sistema de gestión para cuentas de mercado libre realizado en Django, consumiendo el API proporcionado por Mercado Libre y llevando a cabo un scraping a Amazon, este software permite a sus usuarios publicar articulos en masa a su cuenta de ML, configurando todo lo relacionado a su producto (precio, categoria, atributos) con suma facilidad. Igualmente el sistema posee la cualidad de responder preguntas realizadas en las publicaciones en seguimiento de manera automática.
+work3-title=>Backend de Aplicación para venta de lotería
+work3-def=>Desarrollado mediante la tecnología de Django Rest Framework, esta API permite a su cliente gestionar los datos de una venta de lotería, gastando puntos locales del sistema.
+
+education-title=>EDUCACIÓN
+career=>Ingeniería de Sistemas
+
+contact-title=>¿Quieres comunicarte conmigo?
+write-me=>Escribeme todas tus dudas y sugerencias en la caja de texto o también puedes escribirme a mi WhatsApp, te aseguro que me pondré en contacto contigo lo más pronto posible
+send-contact=><i class="material-icons left">send</i>Enviar
+congratulations=>ENHORABUENA!
+message_sent=>Ya tu mensaje ha sido enviado, dentro de poco haré contacto contigo.
+accept=>Aceptar
+
+title-footer=>Puedes contactarme sin ningún compromiso

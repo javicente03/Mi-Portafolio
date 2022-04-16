@@ -15,6 +15,8 @@ $("#lang_english").click(function(e){
         $("#message").prop("placeholder", "Please detail your request.");
         presentationObject.setWords(textEnglish);
         language = 'en';
+        $("#cv1").prop('href', "/static/files/Curriculum Javier Gerardo Inglés.pdf");
+        $("#cv2").prop('href', "/static/files/Curriculum Javier Gerardo Inglés.pdf");
       }
     });
 });
@@ -36,6 +38,8 @@ $("#lang_spanish").click(function(e){
         $("#message").prop("placeholder", "Detalla tu solicitud por favor")
         presentationObject.setWords(textSpanish)
         language = 'es';
+        $("#cv1").prop('href', "/static/files/Curriculum Javier Gerardo.pdf");
+        $("#cv2").prop('href', "/static/files/Curriculum Javier Gerardo.pdf");
       }
     });
 });

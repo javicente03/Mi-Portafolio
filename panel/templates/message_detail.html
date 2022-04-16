@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block main %}
+	<div class="container">
+		<div class="row">
+			<div class="col s12 z-depth-3">
+				<h6>{{object.name}}</h6>
+				<h6>{{object.email}}</h6>
+				<p>{{object.message}}</p>
+				<button type="button" class="btn indigo darken-4" id="read">
+					{% if object.read %}
+						Eliminar
+					{% else %}
+						Marcar Leído
+					{% endif %}
+				</button>
+			</div>
+		</div>
+	</div>
+	{% csrf_token %}
+{% endblock main %}
+
+{% block js %}
+	{% if object.read %}
+		<script src="{% static 'js/delete-message.js' %}"></script>
+	{% else %}
+		<script src="{% static 'js/read-message.js' %}"></script>
+	{% endif %}
+{% endblock js %}

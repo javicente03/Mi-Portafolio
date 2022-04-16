@@ -110,7 +110,9 @@ body{
 
 .profile-img{
     box-shadow: black 2px 2px 2px;
+    opacity: 0;
 }
+
 
 .btn-download{
     background: #333a46;
@@ -147,6 +149,13 @@ body{
 
 .text-right { 
     text-align: right;
+}
+
+.var-const{
+    text-align: right;
+    font-size: 30px;
+    color: #222831;
+    opacity: 0;
 }
 
 .wb-img {
@@ -210,6 +219,19 @@ body{
     }
 
     #works > div > div > div > h3{
+        text-align: center;
+    }
+
+    .text-right {
+        text-align: center;
+    }
+
+    #technologies > div > h3 {
+        font-size: 30px;
+    }
+
+    .var-const{
+        font-size: 15px;
         text-align: center;
     }
 }

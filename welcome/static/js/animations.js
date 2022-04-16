@@ -1,3 +1,15 @@
+// ANIMACIÓN DE LA IMAGEN DE PERFIL
+let profileMin = anime.timeline({loop: false})
+.add({
+  targets: '.profile-max',
+  opacity: [.2, .4, .6, .8, 1],
+  translateX: 20
+})
+.add({
+  targets: '.profile-min',
+  opacity: [.2, .4, .6, .8, 1],
+})
+
 // ANIMACIÓN DEL TELEFONO/WHATSAPP
 let phone = anime({
   targets: '#phone',
@@ -12,6 +24,20 @@ let services = anime({
   translateY:10,
   delay: anime.stagger(300),
   autoplay: false
+});
+
+// ANIMACIÓN DE LA FUNCTION
+let functionAdvance = anime.timeline({
+  loop:false,
+  autoplay:false,
+});
+
+functionAdvance.add({
+  targets: '.var-const',
+  duration: 1000,
+  translateX: 25,
+  opacity: 1,
+  delay: anime.stagger(500),
 });
 
 // ANIMACIÓN DEL FORMULARIO DE CONTACTO

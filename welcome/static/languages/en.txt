@@ -6,7 +6,7 @@ works-button=>Works done
 education-button=>Education
 contact-button=>Contact me
 
-text-hi=>Hi i'm
+text-hi=>Hello World
 engineering=>P.E. Javier Gerardo
 welcome=>Welcome to my portfolio
 download=>DOWNLOAD MY CV
@@ -30,6 +30,11 @@ work3-def=>Powered by Django Rest Framework technology, this API allows your cli
 
 education-title=>EDUCATION
 career=>Systems engineer
+function-title=>Advance
+function-var=>Objectives
+function-var-def=>"They are variables"
+function-const=>Learning
+function-const-def=>"It's constant"
 
 contact-title=>Do you want to communicate with me?
 write-me=>Write me all your doubts and suggestions in the text box or you can also write to my WhatsApp, I assure you that I will contact you as soon as possible

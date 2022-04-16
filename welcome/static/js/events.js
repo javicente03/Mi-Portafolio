@@ -34,6 +34,28 @@ waypointsServices.forEach(({ id, handler }) => (
 ));
 
 // EVENTO PARA LA APARICION DEL FORMULARIO DE CONTACTO
+banderaFunction = true;
+const waypointsFunction = [
+    {
+        id: 'education',
+        handler(direction) {
+            if(banderaFunction){
+                functionAdvance.play()
+                banderaFunction = false
+            }
+        }
+    },
+];
+
+waypointsFunction.forEach(({ id, handler }) => (
+    new Waypoint({
+        element: document.getElementById(id),
+        handler,
+        offset: 200 // añade un margen superior opcional
+    })
+));
+
+// EVENTO PARA LA APARICION DEL FORMULARIO DE CONTACTO
 banderaContact = true;
 const waypointsContact = [
     {
@@ -64,14 +86,9 @@ developerName.innerHTML = developerName.innerText.split("").map(function(char){
     }
     return "<span>"+char+"</span>";
 }).join("");
-
-
-// // EVENTO PARA LA APARICIÓN DINAMICA DE LOS SERVICIOS
-// $(document).ready(function(){
-//     services.play()
-// });
-
-
+setTimeout(function(e){
+    developerName.innerHTML = "Ing. Javier Gerardo"
+}, 2000)
 
 // TEXTO DE PRESENTACIÓN DINAMICO
 class presentationText{

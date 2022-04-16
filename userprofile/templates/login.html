@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block main %}
+<div class="container section">
+	<div class="login-div" >
+		<form id="form">
+			<h4>Iniciar Sesión</h4>
+			<div class="input-field">
+				<input type="text" name="username" id="username">
+				<label for="username">Usuario</label>
+			</div>
+			<div class="input-field">
+				<input type="password" name="password" id="password">
+				<label for="password">Clave</label>
+			</div>
+			<div class="input-field center">
+				<button type="submit" class="btn indigo daken-4">
+				<i class="material-icons left">send</i>
+				Entrar</button>
+			</div>
+			<input type="hidden" name="next" id="next" value="{{next}}">
+			{% csrf_token %}
+		</form>
+	</div>
+</div>
+{% endblock main %}
+
+{% block js %}
+<script src="{% static 'js/login.js' %}"></script>
+{% endblock js %}
