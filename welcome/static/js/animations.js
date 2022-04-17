@@ -1,14 +1,13 @@
 // ANIMACIÓN DE LA IMAGEN DE PERFIL
 let profileMin = anime.timeline({loop: false})
 .add({
-  targets: '.profile-max',
-  opacity: [.2, .4, .6, .8, 1],
+  targets: '.profile-max',  
   translateX: 20
 })
 .add({
   targets: '.profile-min',
-  opacity: [.2, .4, .6, .8, 1],
-})
+  translateY: 1
+});
 
 // ANIMACIÓN DEL TELEFONO/WHATSAPP
 let phone = anime({

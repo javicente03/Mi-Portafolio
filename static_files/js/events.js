@@ -90,13 +90,6 @@ setTimeout(function(e){
     developerName.innerHTML = "Ing. Javier Gerardo"
 }, 2000)
 
-
-// QUITAR OPACIDAD A IMAGENES PERFIL
-setTimeout(function(e){
-    $("#profile-max").css("opacity", 1);
-    $("#profile-min").css("opacity", 1);
-}, 2000)
-
 // TEXTO DE PRESENTACIÓN DINAMICO
 class presentationText{
     // Inicializo los valores, el textStart inicia en español al instanciar la clase
