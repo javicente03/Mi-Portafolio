@@ -12,16 +12,16 @@ environ.Env.read_env()
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-&z(nfj@s2#iq$@+nb(c-!gs_m101-$x8v14an&^7_gr&0o09%8'
+SECRET_KEY = env.str('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 # EMAIL
-# EMAIL_USE_TLS = True
-# EMAIL_HOST = 'smtp.gmail.com'
-# EMAIL_HOST_USER = 'javicentego@gmail.com'
-# EMAIL_HOST_PASSWORD = 'javileon03*'
-# EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+MAIL_HOST_USER = env.str('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = env.str('EMAIL_HOST_PASSWORD')
+EMAIL_PORT = 587
 
 # ALLOWED_HOSTS = tuple(env.list('ALLOWED_HOSTS', default=[]))
 ALLOWED_HOSTS = ['*']
@@ -85,29 +85,17 @@ WSGI_APPLICATION = 'portafolio.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-# HEROKU
+# LOCAL
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'dc2g72lajhkhc7',
-        'HOST': 'ec2-52-203-118-49.compute-1.amazonaws.com',
-        'USER': 'kmyfdngdumskcd',        
-        'PASSWORD': 'cc786cbc2f698e5db0b27dbe0d836d9258d6058989b3b887baf9d9146d6c6e68',
+        'NAME': 'portafolio_bd',
+        'HOST': 'localhost',
+        'USER': 'postgres',        
+        'PASSWORD': '1234',
         'PORT': '5432',
     }
 }
-
-# LOCAL
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'portafolio_bd',
-#         'HOST': 'localhost',
-#         'USER': 'postgres',        
-#         'PASSWORD': '1234',
-#         'PORT': '5432',
-#     }
-# }
 
 
 # Password validation
@@ -146,6 +134,8 @@ USE_TZ = True
 
 # STATIC_URL = 'static/'
 # STATIC_ROOT=  BASE_DIR / 'static_files/'
+
+# PRODUCCION HEROKU
 STATIC_ROOT = os.path.join(BASE_DIR, 'static_files')
 STATIC_URL = '/static/'
 
