@@ -86,13 +86,24 @@ WSGI_APPLICATION = 'portafolio.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 # LOCAL
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'portafolio_bd',
+#         'HOST': 'localhost',
+#         'USER': 'postgres',        
+#         'PASSWORD': '1234',
+#         'PORT': '5432',
+#     }
+# }
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'portafolio_bd',
-        'HOST': 'localhost',
-        'USER': 'postgres',        
-        'PASSWORD': '1234',
+        'NAME': env.str('NAME_BD'),
+        'HOST': env.str('HOST_BD'),
+        'USER': env.str('USER_BD'),        
+        'PASSWORD': env.str('PASSWORD_BD'),
         'PORT': '5432',
     }
 }
