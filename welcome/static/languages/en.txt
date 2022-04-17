@@ -1,6 +1,7 @@
 english-button=>English
 spanish-button=>Spanish
 about-button=>About me
+services-button=>Services
 technologies-button=>Technologies
 works-button=>Works done
 education-button=>Education
